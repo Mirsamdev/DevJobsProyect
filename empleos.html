@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="DevJobs es un sitio web para encontrar trabajos de desarrollo de software y tecnología.">
+  <title>DevJobs - Empleos</title >
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./main.js"></script>
+</head>
+
+
+<body>
+  <header>
+    <div class="header_left">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-snowflake">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M10 4l2 1l2 -1" />
+          <path d="M12 2v6.5l3 1.72" />
+          <path d="M17.928 6.268l.134 2.232l1.866 1.232" />
+          <path d="M20.66 7l-5.629 3.25l.01 3.458" />
+          <path d="M19.928 14.268l-1.866 1.232l-.134 2.232" />
+          <path d="M20.66 17l-5.629 -3.25l-2.99 1.738" />
+          <path d="M14 20l-2 -1l-2 1" />
+          <path d="M12 22v-6.5l-3 -1.72" />
+          <path d="M6.072 17.732l-.134 -2.232l-1.866 -1.232" />
+          <path d="M3.34 17l5.629 -3.25l-.01 -3.458" />
+          <path d="M4.072 9.732l1.866 -1.232l.134 -2.232" />
+          <path d="M3.34 7l5.629 3.25l2.99 -1.738" />
+        </svg>
+        <h2>DevJobs</h2>
+      </div>
+
+      <nav class="header_navigation">
+        <a href="./index.html">Inicio</a>
+        <a href="./empleos.html">Empleos</a>
+        <a href="">Empresas</a>
+        <a href="">Salarios</a>
+      </nav>
+    </div>
+
+    <div class="header_right">
+      <button class="btn__cv">Subir CV</button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+      </svg>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <h1>Encuentra tu próximo trabajo</h1>
+      <p>Explora miles de oportunidades en el sector tecnologico</p>
+
+
+      <form name="search" id="empleos-search-form" role="search" class="formulario">
+        <div class="search-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+
+          <input id="input-js" type="text" placeholder="Buscar empleos..." />
+        </div>
+
+        <div class="filters">
+          <select name="technology" id="filter-technology" class="filter__select">
+            <option value="todos">Tecnologia</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="react">React</option>
+            <option value="nodejs">Node.js</option>
+            <option value="mobile">Mobile</option>
+          </select>
+          <select name="location" id="filter-modalidad" class="filter__select">
+            <option value="todos">Ubicacion</option>
+            <option value="remoto">Remoto</option>
+            <option value="aragua">Aragua</option>
+            <option value="monagas">Monagas</option>
+            <option value="zulia">Zulia</option>
+            <option value="caracas">Caracas</option>
+          </select>
+
+          <select name="experience" id="filter-nivel" class="filter__select">
+            <option value="todos">Nivel de experiencia</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior">Junior</option>
+            <option value="semisenior">Semi-Senior</option>
+            <option value="senior">Senior</option>
+            <option value="staff">Staff</option>
+          </select>
+        </div>
+
+      </form>
+
+
+
+      <h2>Resultados de Busqueda</h2>
+
+      <div class="cards">
+        
+      </div>
+    </div>
+
+    <nav class="pagination">
+      <button id="btn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M15 6l-6 6l6 6" />
+        </svg></button>
+      
+      <button id="btn-next"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M9 6l6 6l-6 6" />
+        </svg></button>
+    </nav>
+  </main>
+</body>
+<footer>
+
+</footer>
+
+</html>
